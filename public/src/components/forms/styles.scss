@@ -1,0 +1,48 @@
+.input-field {
+  padding: 30px 24px 10px;
+  height: 64px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: #ecf2f3;
+  font-size: 18px;
+  color: #161616;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: #161616;
+    -webkit-box-shadow: none;
+    background-color: #ecf2f3;
+  }
+  &:focus {
+    outline: none;
+  }
+  &-label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+  &-text {
+    font-size: 18px;
+    transition: all 0.15s ease-out;
+    color: #646F72;
+  }
+  &-container {
+    position: relative;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+}
+
+.input-field:focus + .input-field-label .input-field-text,
+:not(input[data-len=""]) + .input-field-label .input-field-text {
+  font-size: 12px;
+  transform: translate(0, -100%);
+}

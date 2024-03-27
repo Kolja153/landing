@@ -1,0 +1,111 @@
+.images-set-section {
+  h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    max-width: 195px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+    @media (min-width: 768px) {
+      font-size: 26px;
+      max-width: 295px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 32px;
+      max-width: 320px;
+      padding-bottom: 80px;
+      margin-bottom: 80px;
+    }
+    span {
+      color: #567B84;
+    }
+    &::after {
+      content: "\e901";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: icomoon;
+      font-size: 38px;
+      line-height: 1;
+      color: #6d8a91;
+      @media (min-width: 1200px) {
+        font-size: 55px;
+      }
+    }
+  }
+  &-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    @media (min-width: 992px) {
+      gap: 24px;
+    }
+  }
+  &-image {
+    flex-basis: 50%;
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 992px) {
+      flex-basis: 33.33%;
+    }
+    &::after {
+      content: '';
+      display: block;
+    }
+    &:first-child {
+      max-width: 304px;
+      transform: translateY(10%);
+      @media (min-width: 992px) {
+        transform: translateY(-55%);
+      }
+      &::after {
+        padding-bottom: 138%;
+      }
+    }
+    &:nth-child(2) {
+      max-width: 416px;
+      &::after {
+        padding-bottom: 100%;
+      }
+    }
+    &:nth-child(3) {
+      max-width: 304px;
+      display: none;
+      transform: translateY(-30%);
+      &::after {
+        padding-bottom: 138%;
+      }
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+  &-reverse {
+    .images-set-section-image {
+      &:first-child {
+        display: none;
+        transform: translateY(-30%);
+        &::after {
+          padding-bottom: 138%;
+        }
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+      &:nth-child(3) {
+        transform: translateY(10%);
+        display: block;
+        @media (min-width: 992px) {
+          transform: translateY(-55%);
+        }
+        &::after {
+          padding-bottom: 138%;
+        }
+      }
+    }
+  }
+}

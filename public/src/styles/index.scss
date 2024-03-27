@@ -1,0 +1,173 @@
+@import "../../node_modules/scss-reset/reset";
+@import "./icon-font/style.scss";
+@import "./variables.scss";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-text;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-dark;
+  background-color: #fbfcfd;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-heading;
+  color: $color-dark;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.3;
+  color: $color-dark;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &-primary {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: darken($color-primary, 10);
+      border-color: darken($color-primary, 10);
+    }
+  }
+  &-outline {
+    color: $color-primary;
+    background-color: transparent;
+    border-color: $color-primary;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: darken($color-primary, 10);
+      border-color: darken($color-primary, 10);
+    }
+  }
+  &-lg {
+    padding: 0.75rem 1rem;
+  }
+}
+
+.styled-list {
+  color: #505a5c;
+  li {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 40px;
+    line-height: 1.3;
+    &::before {
+      content: "\e902";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      font-family: icomoon;
+      font-size: 28px;
+      line-height: 1;
+      color: #6d8a91;
+    }
+  }
+}
+
+a {
+  color: $color-dark;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+// slider nav
+.swiper-navigation {
+  color: #567B84;
+  & > div {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 0;
+    cursor: pointer;
+    user-select: none;
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+    &:first-child {
+      margin-right: 8px;
+      @media (min-width: 768px) {
+        margin-right: 12px;
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default
+    }
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+}
+
+@import "../components/forms/styles.scss";
+@import "../components/header/styles.scss";
+@import "../components/footer/styles.scss";
+@import "../components/imagesSetBlock/styles.scss";
+@import "../components/individualDance/styles.scss";
+@import "../components/firstDance/styles.scss";
+@import "../components/infoSection/styles.scss";
+@import "../components/trainingProgram/styles.scss";
+@import "../components/mapSection/styles.scss";
+@import "../components/formSection/styles.scss";
+@import "../components/feedbackSection/styles.scss";
