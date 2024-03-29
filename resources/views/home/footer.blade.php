@@ -2,7 +2,7 @@
     <div class="container footer-inner">
         <div class="footer-copy">
             <p>
-                Студія весільного танцю "FedanStudio" м. Львів, вул. Зелена 149ю
+                Студія весільного танцю "FedanStudio" м. Львів, пр. Чорновола 45а 6 корпус
             </p>
         </div>
         <div class="footer-social">
@@ -11,7 +11,7 @@
             >
             <ul class="footer-social-list">
                 <li>
-                    <a href="#" class="icon-facebook"></a>
+                    <a href="https://www.facebook.com/FedanStudio" class="icon-facebook"></a>
                 </li>
                 <li>
                     <a href="#" class="icon-twitter"></a>
