@@ -309,7 +309,7 @@
     <script
         async
         defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAP_KEY&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_O4Uu3OpcT9d8E3fVGBeId99wuDjn-ms&callback=initMap"
     ></script>
 </section>
 <!-- MAP END -->
