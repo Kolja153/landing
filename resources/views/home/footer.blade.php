@@ -14,9 +14,6 @@
                     <a href="https://www.facebook.com/FedanStudio" class="icon-facebook"></a>
                 </li>
                 <li>
-                    <a href="#" class="icon-twitter"></a>
-                </li>
-                <li>
                     <a href="#" class="icon-instagram"></a>
                 </li>
             </ul>

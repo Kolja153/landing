@@ -17,3 +17,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+public/dist/images/section_3/
+
+public/dist/images/section_4/
+
+public/dist/images/section_6/
+
+public/dist/videos/
