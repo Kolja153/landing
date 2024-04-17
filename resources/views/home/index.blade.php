@@ -36,7 +36,7 @@
 @include('home.section_6')
 <!-- RESULTS DANCE END -->
 <!-- FEEDBACKS SECTION START -->
-@include('home.section_7')
+{{--@include('home.section_7')--}}
 <!-- FEEDBACKS SECTION END -->
 <!-- FORM SECTION START -->
 @include('home.section_8')

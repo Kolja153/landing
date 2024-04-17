@@ -9,9 +9,9 @@
                 <span>Програма:</span>{{ $product['program'] }}
             </li>
             <li>
-                <span>Розклад занять:</span> {{ $product['schedule'] }}
+                <span>Тривалість навчання:</span> {{ $product['schedule'] }}
             </li>
-            <li><span>Тривалість:</span>{{ $product['duration'] }}</li>
+            <li><span>Тривалість заняття:</span>{{ $product['duration'] }}</li>
         </ul>
         <div class="training-program-price">
             <p>{{ $product['price'] }}</p>
