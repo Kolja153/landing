@@ -5,7 +5,7 @@
                 <a href="https://www.facebook.com/FedanStudio" class="icon-facebook"></a>
             </li>
             <li>
-                <a href="#" class="icon-instagram"></a>
+                <a href="https://www.instagram.com/fedanstudio" class="icon-instagram"></a>
             </li>
         </ul>
         <a class="header-mobile-social-tel" href="tel:+38 (098) 39-84-806"
@@ -24,10 +24,10 @@
         >
         <ul class="header-social">
             <li>
-                <a href="#" class="icon-facebook"></a>
+                <a href="https://www.facebook.com/FedanStudio" class="icon-facebook"></a>
             </li>
             <li>
-                <a href="#" class="icon-instagram"></a>
+                <a href="https://www.instagram.com/fedanstudio" class="icon-instagram"></a>
             </li>
         </ul>
         <a href="#form-section" type="button" class="btn btn-primary"

@@ -14,7 +14,7 @@
                     <a href="https://www.facebook.com/FedanStudio" class="icon-facebook"></a>
                 </li>
                 <li>
-                    <a href="#" class="icon-instagram"></a>
+                    <a href="https://www.instagram.com/fedanstudio" class="icon-instagram"></a>
                 </li>
             </ul>
         </div>
