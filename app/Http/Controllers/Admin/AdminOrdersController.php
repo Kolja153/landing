@@ -17,9 +17,11 @@ class AdminOrdersController extends Controller
 
     public function delete($id)
     {
-        $product = Order::find($id);
-        $product->delete();
+        $order = Order::find($id);
+        if ($order) {
+            $order->delete();
+        }
 
-        return redirect()->route('admin.order_index');
+        return redirect()->route('admin_orders_index');
     }
 }

@@ -49,6 +49,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/admin/orders', [AdminOrdersController::class, 'index'])
         ->name('admin_orders_index');
+    Route::delete('/admin/orders/{id}', [AdminOrdersController::class, 'delete'])
+        ->name('admin_orders_delete');
 });
 
 

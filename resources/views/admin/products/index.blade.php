@@ -69,7 +69,11 @@
                                                 @csrf
                                                 @method('DELETE')
 
-                                                <button class="btn btn-block btn-danger">Delete</button>
+                                                <button class="btn btn-block btn-danger"
+                                                        onclick="return confirm('Are you really want to delete this order?');"
+                                                >
+                                                    Delete
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>

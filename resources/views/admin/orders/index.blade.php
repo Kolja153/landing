@@ -38,11 +38,9 @@
                                     <th>Time</th>
                                     <th>name</th>
                                     <th>phone</th>
-
                                     <th>title</th>
                                     <th>duration</th>
                                     <th>price</th>
-                                    <th>created at</th>
                                     <th>product in baza</th>
                                 </tr>
                                 </thead>
@@ -51,7 +49,7 @@
                                     <tr>
                                         <td>{{ $order['id'] }}</td>
                                         <td>{{ (new Carbon($order['created_at']))->format('d-m-Y') }}</td>
-                                        <td>{{ (new Carbon($order['created_at']))->format('H:i') }}</td>
+                                        <td>{{ (new Carbon($order['created_at']))->timezone(config('app.timezone'))->format('H:i') }}</td>
                                         <td>{{ $order['name'] }}</td>
                                         <td>{{ $order['phone'] }}</td>
                                         @if($order['snap_product'])
@@ -61,25 +59,26 @@
                                             <td>{{ $snapProduct['title'] }}</td>
                                             <td>{{ $snapProduct['duration'] }}</td>
                                             <td>{{ $snapProduct['price'] }}</td>
-                                            <td>
-                                                {{ \Carbon\Carbon::parse($snapProduct['created_at'])->format('d F Y h:i') }}
-                                            </td>
                                             <td>{{ $snapProduct['product_id'] }}</td>
                                         @else
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
                                         @endif
                                         <td>
-                                            <form action="{{ route('admin_products_delete', ['id'=>$order['id']]) }}"
+                                            <form action="{{ route('admin_orders_delete', ['id'=>$order['id']]) }}"
                                                   method="POST"
                                             >
                                                 @csrf
                                                 @method('DELETE')
 
-                                                <button class="btn btn-block btn-danger">Delete</button>
+                                                <button class="btn btn-block btn-danger"
+                                                        onclick="return confirm('Are you really want to delete this order?');"
+
+                                                >
+                                                    Delete
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>
