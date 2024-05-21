@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Carbon;
+@endphp
+
 @extends('admin.admin_base')
 
 @section('page-title', 'Orders')
@@ -30,6 +34,8 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
                                     <th>name</th>
                                     <th>phone</th>
 
@@ -44,6 +50,8 @@
                                 @foreach($orders as $order)
                                     <tr>
                                         <td>{{ $order['id'] }}</td>
+                                        <td>{{ (new Carbon($order['created_at']))->format('d-m-Y') }}</td>
+                                        <td>{{ (new Carbon($order['created_at']))->format('H:i') }}</td>
                                         <td>{{ $order['name'] }}</td>
                                         <td>{{ $order['phone'] }}</td>
                                         @if($order['snap_product'])
