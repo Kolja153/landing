@@ -40,6 +40,7 @@
                                     <th>program</th>
                                     <th>duration</th>
                                     <th>price</th>
+                                    <th>old_price</th>
                                     <th>price info</th>
                                     <th></th>
                                     <th></th>
@@ -51,9 +52,10 @@
                                         <td>{{ $product['id'] }}</td>
                                         <td>{{ $product['title'] }}</td>
                                         <td>{{ $product['lesson'] }}</td>
-                                        <td>{{ $product['program'] }}</td>
+                                        <td class="text-wrap">{{ $product['program'] }}</td>
                                         <td>{{ $product['duration'] }}</td>
                                         <td>{{ $product['price'] }}</td>
+                                        <td>{{ $product['old_price'] }}</td>
                                         <td>{{ $product['price_info'] }}</td>
                                         <td>
                                             <a class="btn btn-block btn-primary"
