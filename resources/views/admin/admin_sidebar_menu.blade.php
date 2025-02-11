@@ -29,9 +29,9 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('admin_page_header')}}" class="nav-link">
+                    <a href="{{ route('admin_page_company_info_index')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Header</p>
+                        <p>Company info</p>
                     </a>
                 </li>
                 <li class="nav-item">

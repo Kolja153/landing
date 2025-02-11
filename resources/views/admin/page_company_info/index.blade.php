@@ -1,20 +1,20 @@
 @extends('admin.admin_base')
 
-@section('page-title', 'Products')
+@section('page-title', 'CompanyInfo')
 
 @section('content')
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-1 mb-3">
-                    <a class="btn btn-block btn-success" href="{{ route('admin_products_new') }}">
+                    <a class="btn btn-block btn-success" href="{{ route('admin_page_company_info_new')}}">
                         new
                     </a>
                 </div>
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Products Table</h3>
+                            <h3 class="card-title">Company Info</h3>
 
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -35,37 +35,29 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>title</th>
-                                    <th>lesson</th>
-                                    <th>program</th>
-                                    <th>duration</th>
-                                    <th>price</th>
-                                    <th>old_price</th>
-                                    <th>price info</th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>type</th>
+                                    <th>icon</th>
+                                    <th>value</th>
+                                    <th>active</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($products as $product)
+                                @foreach($company_info as $company_inf)
                                     <tr>
-                                        <td>{{ $product['id'] }}</td>
-                                        <td>{{ $product['title'] }}</td>
-                                        <td>{{ $product['lesson'] }}</td>
-                                        <td class="text-wrap">{{ $product['program'] }}</td>
-                                        <td>{{ $product['duration'] }}</td>
-                                        <td>{{ $product['price'] }}</td>
-                                        <td>{{ $product['old_price'] }}</td>
-                                        <td>{{ $product['price_info'] }}</td>
+                                        <td>{{ $company_inf['id'] }}</td>
+                                        <td>{{ $company_inf['type'] }}</td>
+                                        <td>{{ $company_inf['icon'] }}</td>
+                                        <td>{{ $company_inf['value'] }}</td>
+                                        <td>{{ $company_inf['active'] }}</td>
                                         <td>
                                             <a class="btn btn-block btn-primary"
-                                               href="{{ route('admin_products_edit', ['id'=>$product['id']]) }}"
+                                               href="{{ route('admin_page_company_info_edit', ['id'=>$company_inf['id']]) }}"
                                             >
                                                 Edit
                                             </a>
                                         </td>
                                         <td>
-                                            <form action="{{ route('admin_products_delete', ['id'=>$product['id']]) }}"
+                                            <form action="{{ route('admin_page_company_info_delete', ['id'=>$company_inf['id']]) }}"
                                                   method="POST"
                                             >
                                                 @csrf

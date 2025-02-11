@@ -15,6 +15,8 @@
         </ul>
         <div class="training-program-price">
             <p>{{ $product['price'] }}</p>
+            <span><s>{{ $product['old_price'] }}</s></span>
+            <br>
             <span>{{ $product['price_info'] }}</span>
         </div>
         <a

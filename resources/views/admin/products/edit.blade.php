@@ -81,10 +81,23 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label>7. price info (* додаткове заняття 300 грн)</label>
+                                            <label>7. old_price (* 1650 грн/курс)</label>
+                                            <input type="text" class="form-control" placeholder="Enter ..."
+                                                   name="old_price"
+                                                   value="{{ $old_price ?? null }}"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label>8. price info (* додаткове заняття 300 грн)</label>
                                             <input type="text" class="form-control" placeholder="Enter ..."
                                                    name="price_info"
                                                    value="{{ $price_info ?? null }}"
@@ -95,7 +108,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label>8. product_id (* продукт в базі)</label>
+                                            <label>9. product_id (* продукт в базі)</label>
                                             <input type="text" class="form-control" placeholder="Enter ..."
                                                    name="product_id"
                                                    value="{{ $product_id ?? null }}"
