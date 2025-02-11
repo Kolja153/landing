@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\AdminOrdersController;
 use App\Http\Controllers\Admin\AdminProductsController;
+use App\Http\Controllers\Admin\AdminCompanyInfoController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,15 @@ Route::group(['middleware' => 'auth'], function () {
         ->name('admin_orders_index');
     Route::delete('/admin/orders/{id}', [AdminOrdersController::class, 'delete'])
         ->name('admin_orders_delete');
+
+    Route::get('/admin/page/company-info', [AdminCompanyInfoController::class, 'index'])
+        ->name('admin_page_company_info_index');
+    Route::match(['GET', 'POST'], '/admin/page/company-info/new', [AdminCompanyInfoController::class, 'new'])
+        ->name('admin_page_company_info_new');
+    Route::delete('/admin/page/company-info/{id}', [AdminCompanyInfoController::class, 'delete'])
+        ->name('admin_page_company_info_delete');
+    Route::match(['GET', 'PATCH'], '/admin/page/company-info/{id}', [AdminCompanyInfoController::class, 'edit'])
+        ->name('admin_page_company_info_edit');
 });
 
 
